@@ -101,4 +101,4 @@ function jobSearch(luogo, ruolo) {
    
 }
 
-console.log(jobSearch("US", "eng"))
+console.log(jobSearch())

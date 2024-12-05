@@ -1,0 +1,11 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20rem;
+}
+
+#searchButton {
+    margin-top: 1rem;
+    width: 5rem;
+}
