@@ -86,7 +86,7 @@ const jobs = [
 ]
 
 
-function jobSearch() {
+/*function jobSearch() {
     let luogo = document.getElementById("location").value.toLowerCase()
     let ruolo = document.getElementById("position").value.toLowerCase()
     let result = jobs.filter(jobs => {
@@ -143,4 +143,54 @@ window.addEventListener("load", () => {
 const PULSANTE = document.getElementById("searchButton")
 PULSANTE.addEventListener("click", jobSearch)
 
+}) */
+
+function jobSearch(luogo, ruolo) {
+  let result = jobs.filter(jobs => {
+    let locationCheck = jobs.location.toLowerCase().includes(luogo)
+    let titleCheck = jobs.title.toLowerCase().includes(ruolo)
+    return (locationCheck && titleCheck)
+  })
+  let count = result.length
+  return {result: result, count: count}
+  
+}
+
+function displayResult(result) {
+  let count = result.length
+  let resultDiv = document.querySelector("#results")
+  resultDiv.innerHTML = ""
+  let listTitle = document.createElement("h2")
+  resultDiv.appendChild(listTitle)
+
+  if (count === 0) {
+    listTitle.textContent = "No jobs found matching your criteria"
+  } else{
+    let resultList = document.createElement("ul")
+    resultList.id = "resultList"
+    if (count === 1) {
+      listTitle.textContent = count + " job found!"
+    } else {
+      listTitle.textContent = count + " jobs found!"
+    }
+    for (let i of result) {
+      let listItem = document.createElement("li")
+      listItem.classList.add("listItem")
+        listItem.textContent = i.location + " - " + i.title
+        resultList.appendChild(listItem)
+    }
+
+    resultDiv.appendChild(resultList)
+  }
+  
+}
+
+const PULSANTE = document.getElementById("searchButton")
+PULSANTE.addEventListener("click", () => {
+  let luogo = document.getElementById("location").value.toLowerCase()
+  let ruolo = document.getElementById("position").value.toLowerCase()
+  let results = jobSearch(luogo, ruolo)
+ 
+  displayResult(results.result)
 })
+
