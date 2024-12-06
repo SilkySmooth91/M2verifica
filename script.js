@@ -86,65 +86,6 @@ const jobs = [
 ]
 
 
-/*function jobSearch() {
-    let luogo = document.getElementById("location").value.toLowerCase()
-    let ruolo = document.getElementById("position").value.toLowerCase()
-    let result = jobs.filter(jobs => {
-    let locationCheck = jobs.location.toLowerCase().includes(luogo)
-    let titleCheck = jobs.title.toLowerCase().includes(ruolo)
-    return (locationCheck && titleCheck)
-  })
-
-    let count = result.length
-    
-    let resultsDiv = document.getElementById("results")
-    resultsDiv.innerHTML = ""
-
-    if ((count > 0) && (count !== 1)) {
-      let listTitle = document.createElement("h2")
-      listTitle.textContent = count + " jobs found!"
-      resultsDiv.appendChild(listTitle)
-
-      let list = document.createElement("ul")
-      list.id = "resultList"
-      for (let element of result) {
-        let listItem = document.createElement("li")
-        listItem.textContent = element.location + " - " + element.title
-        listItem.classList.add("listItem")
-        list.appendChild(listItem)
-      }
-      resultsDiv.appendChild(list)
-    } else if (count === 1) {
-      let listTitle = document.createElement("h2")
-      listTitle.textContent = count + " job found!"
-      resultsDiv.appendChild(listTitle)
-
-      let list = document.createElement("ul")
-      list.id = "resultList"
-      for (let element of result) {
-        let listItem = document.createElement("li")
-        listItem.textContent = element.location + " - " + element.title
-        listItem.classList.add("listItem")
-        list.appendChild(listItem)
-      }
-      resultsDiv.appendChild(list)
-    } else {
-      let noResults = document.createElement("h2")
-      noResults.textContent = "No jobs found matching your criteria"
-      resultsDiv.appendChild(noResults)
-    }
-    return {result: result, count: count}
-  
-    
-   
-}
-window.addEventListener("load", () => {
-
-const PULSANTE = document.getElementById("searchButton")
-PULSANTE.addEventListener("click", jobSearch)
-
-}) */
-
 function jobSearch(luogo, ruolo) {
   let result = jobs.filter(jobs => {
     let locationCheck = jobs.location.toLowerCase().includes(luogo)
