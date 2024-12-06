@@ -1,3 +1,7 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -8,4 +12,16 @@ form {
 #searchButton {
     margin-top: 1rem;
     width: 5rem;
+}
+
+#resultList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 20rem;
+    width: 50%;
+}
+
+.listItem {
+    margin-bottom: 1rem;
 }
