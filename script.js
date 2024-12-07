@@ -102,6 +102,7 @@ function displayResult(result) {
   let resultDiv = document.querySelector("#results")
   resultDiv.innerHTML = ""
   let listTitle = document.createElement("h2")
+  listTitle.id = "listTitle"
   resultDiv.appendChild(listTitle)
 
   if (count === 0) {

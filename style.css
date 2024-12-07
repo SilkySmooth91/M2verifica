@@ -1,27 +1,123 @@
 body {
     font-family: "Roboto", sans-serif;
+    margin: 0;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    background-color: #000028;
+}
+
+header :last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav :first-child {
+    text-decoration: none;
+    color: white;
+    margin-right: 4rem;
+    margin-bottom: 0.3rem;
+    font-size: large;
+}
+
+h1 {
+    margin-top: 0;
+    padding-top: 4.5rem;
+    padding-left: 4rem;
+    font-size: 260%;
+}
+
+#searchSection {
+    background-image: url("assets/microsoft-image.png");
+    background-size: cover;
+}
+
 
 form {
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    width: 20rem;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100rem;
+    padding-left: 4rem;
+    padding-bottom: 5rem;
+    padding-top: 1.5rem;
+}
+
+
+
+#location, #position {
+    height: 2.5rem;
+    width: 25rem;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+input::placeholder {
+    font-size: medium;
+    font-style: italic;
 }
 
 #searchButton {
-    margin-top: 1rem;
     width: 5rem;
+    height: 2.7rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: blueviolet;
+    color: white;
+    font-size: 0.9rem;
+}
+
+#results {
+    height: 40rem;
+}
+
+#listTitle {
+    padding-left: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 #resultList {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 20rem;
-    width: 50%;
+    padding-left: 4.5rem;
+    height: 30rem;
+    width: 100%;
 }
 
 .listItem {
     margin-bottom: 1rem;
+    height: 2rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    background-color: #000028;
+}
+
+footer > img {
+    height: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+#footerLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.bottomLinks {
+    text-decoration: none;
+    color: white;
 }

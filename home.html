@@ -10,21 +10,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="assets/siemes-logo.png" alt="siemens-logo">
+        <nav>
+            <a href="#">Login</a>
+        </nav>
+    </header>
     <main>
+        <section id="searchSection">
         <h1>Search for open jobs</h1>
         <form id="form">
-            <label for="location">Search a location</label>
-            <input type="text" id="location" name="Location">
-            <label for="position">Search a job position</label>
-            <input type="text" id="position" name="Position">
+            
+            <input type="text" id="location" name="Location" placeholder="Search a location...">
+            
+            <input type="text" id="position" name="Position" placeholder="Search a job position...">
             <input type="button" value="Submit" id="searchButton">
           </form>
+        </section>
 
           <div id="results"></div>
     </main>
     
 
-
+    <footer>
+        <img src="assets/siemes-logo.png" alt="siemens-logo">
+        <div id="footerLinks">
+            <p><a href="#" class="bottomLinks">Digital ID</a></p>
+            <p><a href="#" class="bottomLinks">Terms</a></p>
+            <p><a href="#" class="bottomLinks">Privacy Notice</a></p>
+            <p><a href="#" class="bottomLinks">Cookie Policy</a></p>
+            <p><a href="#" class="bottomLinks">Whistleblowing</a></p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
